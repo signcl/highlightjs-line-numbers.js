@@ -99,12 +99,10 @@ v2.8    | startFrom  | int     | 1             | [Start numbering from a custom 
 ```js
 import {HighlightJsLineNumbers} from '@openbayes/highlightjs-line-numbers';
 // after load highlight.js
-HighlightJsLineNumbers.addStyles();
+HighlightJsLineNumbers.addStyles(document);
 
-HighlightJsLineNumbers.lineNumbersBlock(element,options);
+HighlightJsLineNumbers.lineNumbersBlock(document,element,options);
 
-// or after highlight code,add line number
-HighlightJsLineNumbers.initLineNumbersOnLoad(options);
 ```
 
 ### Examples of using
