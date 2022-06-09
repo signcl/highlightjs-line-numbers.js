@@ -164,4 +164,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# typescript *.d.ts
+/lib
+
 # End of https://www.gitignore.io/api/vim,node,macos,windows,sublimetext,visualstudiocode
