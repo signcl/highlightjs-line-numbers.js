@@ -14,13 +14,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wcoder/highlightjs-line-numbers.js.git"
+    "url": "git+https://github.com/signcl/highlightjs-line-numbers.js"
   },
-  "author": "Yauheni Pakala <evgeniy.pakalo@gmail.com>",
+  "author": "Demi1024 <demi1024w@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wcoder/highlightjs-line-numbers.js/issues"
+    "url": "https://github.com/signcl/highlightjs-line-numbers.js/issues"
   },
-  "homepage": "http://wcoder.github.io/highlightjs-line-numbers.js/",
+  "homepage": "https://github.com/signcl/highlightjs-line-numbers.js",
   "keywords": []
 }
