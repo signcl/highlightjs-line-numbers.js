@@ -94,6 +94,19 @@ version | name       | type    | default value | description
 v2.1    | singleLine | boolean | false         | enable plugin for code block with one line
 v2.8    | startFrom  | int     | 1             | [Start numbering from a custom value](#startFrom)
 
+### Examples of using Typescript version
+
+```js
+import {HighlightJsLineNumbers} from '@openbayes/highlightjs-line-numbers';
+// after load highlight.js
+HighlightJsLineNumbers.addStyles();
+
+HighlightJsLineNumbers.lineNumbersBlock(element,options);
+
+// or after highlight code,add line number
+HighlightJsLineNumbers.initLineNumbersOnLoad(options);
+```
+
 ### Examples of using
 
 ```js
