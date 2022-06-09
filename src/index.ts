@@ -91,7 +91,7 @@ export class HighlightJsLineNumbers {
     }
   }
 
-  public static addStyles() {
+  public static addStyles(document) {
     let css = document.createElement('style');
     css.type = 'text/css';
     css.innerHTML = this.format(
@@ -101,35 +101,6 @@ export class HighlightJsLineNumbers {
       [this.TABLE_NAME, this.NUMBER_LINE_NAME, this.DATA_ATTR_NAME]
     );
     document.getElementsByTagName('head')[0].appendChild(css);
-  }
-
-  public static initLineNumbersOnLoad(options) {
-    if (
-      document.readyState === 'interactive' ||
-      document.readyState === 'complete'
-    ) {
-      this.documentReady(options);
-    } else {
-      window.addEventListener('DOMContentLoaded', function () {
-        this.documentReady(options);
-      });
-    }
-  }
-
-  public static documentReady(options) {
-    try {
-      let blocks = document.querySelectorAll('code.hljs,code.nohighlight');
-
-      for (let i in blocks) {
-        if (blocks.hasOwnProperty(i)) {
-          if (!this.isPluginDisabledForBlock(blocks[i])) {
-            this.lineNumbersBlock(blocks[i], options);
-          }
-        }
-      }
-    } catch (e) {
-      window.console.error('LineNumbers error: ', e);
-    }
   }
 
   public static isPluginDisabledForBlock(element) {
@@ -144,7 +115,7 @@ export class HighlightJsLineNumbers {
     });
   }
 
-  public static lineNumbersValue(value, options) {
+  public static lineNumbersValue(document,value, options) {
     if (typeof value !== 'string') return;
 
     let element = document.createElement('code');
@@ -298,7 +269,7 @@ export class HighlightJsLineNumbers {
   ///
 
   static async(func) {
-    window.setTimeout(func, 0);
+    setTimeout(func, 0);
   }
 
   /**
