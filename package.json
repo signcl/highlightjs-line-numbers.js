@@ -1,6 +1,6 @@
 {
   "name": "@openbayes/highlightjs-line-numbers",
-  "version": "2.8.1",
+  "version": "2.8.2",
   "description": "Highlight.js line numbers plugin.",
   "main": "src/index.ts",
   "devDependencies": {
